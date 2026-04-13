@@ -9,6 +9,8 @@ import { LogoCloud } from "@/components/ui/logo-cloud-3";
 import { WorkflowBuilder } from "@/components/WorkflowBuilder";
 import { ClientGrowth } from "@/components/ClientGrowth";
 import { FreeTrial } from "@/components/FreeTrial";
+import { GlobalReach } from "@/components/GlobalReach";
+import { Footer } from "@/components/Footer";
 
 const logos = [
   {
@@ -235,6 +237,12 @@ export default function App() {
 
       {/* Free Trial Section */}
       <FreeTrial />
+
+      {/* Global Reach (Final Section) */}
+      <GlobalReach />
+      
+      {/* Platform Level Footer */}
+      <Footer />
     </div>
   );
 }
