@@ -5,9 +5,10 @@
 
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import { LogoCloud } from "@/components/ui/logo-cloud-4";
+import { LogoCloud } from "@/components/ui/logo-cloud-3";
 import { WorkflowBuilder } from "@/components/WorkflowBuilder";
 import { ClientGrowth } from "@/components/ClientGrowth";
+import { FreeTrial } from "@/components/FreeTrial";
 
 const logos = [
   {
@@ -202,16 +203,28 @@ export default function App() {
       </div>
 
       {/* Logo Cloud Section */}
-      <div className="w-full py-20 relative overflow-hidden bg-black border-b border-white/5">
-        <h2 className="mb-12 text-center">
-          <span className="block font-medium text-lg text-gray-400 mb-2">
-            Already used by
-          </span>
-          <span className="font-semibold text-3xl text-white tracking-tight md:text-4xl">
-            Best in the Game
-          </span>
-        </h2>
-        <LogoCloud logos={logos} />
+      <div className="min-h-[60vh] w-full flex flex-col items-center justify-center relative bg-black border-b border-white/5 overflow-hidden">
+        <div
+          aria-hidden="true"
+          className={cn(
+            "-z-0 -top-1/2 -translate-x-1/2 pointer-events-none absolute left-1/2 h-[120vmin] w-[120vmin] rounded-b-full",
+            "bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.08),transparent_50%)]",
+            "blur-[30px]"
+          )}
+        />
+
+        <section className="relative z-10 mx-auto w-full max-w-4xl px-4 py-8">
+          <h2 className="mb-8 text-center font-medium text-white text-xl tracking-tight md:text-3xl lg:text-4xl">
+            <span className="text-gray-400">Trusted by experts.</span>
+            <br />
+            <span className="font-semibold">Used by the leaders.</span>
+          </h2>
+          <div className="mx-auto mb-8 h-px w-full max-w-md bg-white/20 [mask-image:linear-gradient(to_right,transparent,black,transparent)]" />
+
+          <LogoCloud logos={logos} />
+
+          <div className="mt-8 mx-auto h-px w-full max-w-4xl bg-white/20 [mask-image:linear-gradient(to_right,transparent,black,transparent)]" />
+        </section>
       </div>
 
       {/* Workflow Builder Section */}
@@ -219,6 +232,9 @@ export default function App() {
 
       {/* Client Exponential Growth Section */}
       <ClientGrowth />
+
+      {/* Free Trial Section */}
+      <FreeTrial />
     </div>
   );
 }
