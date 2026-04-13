@@ -81,7 +81,7 @@ const FadeIn: React.FC<{
  */
 const AnimatedHeading: React.FC<{ text: string }> = ({ text }) => {
   const [isAnimating, setIsAnimating] = useState(false);
-  const charDelay = 30;
+  const wordDelay = 50;
   const initialDelay = 200;
 
   useEffect(() => {
@@ -90,27 +90,33 @@ const AnimatedHeading: React.FC<{ text: string }> = ({ text }) => {
   }, []);
 
   const lines = text.split("\n");
+  let globalWordIndex = 0;
 
   return (
     <h1
-      className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal mb-4 leading-tight"
-      style={{ letterSpacing: "-0.04em" }}
+      className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium mb-6 leading-tight max-w-2xl"
+      style={{ letterSpacing: "-0.03em" }}
     >
       {lines.map((line, lineIndex) => (
-        <div key={lineIndex} className="block">
-          {line.split("").map((char, charIndex) => {
-            const delay = lineIndex * line.length * charDelay + charIndex * charDelay;
+        <div key={lineIndex} className="block w-full">
+          {line.split(" ").map((word, wordIndex) => {
+            // Keep empty spaces rendered cleanly
+            if (!word) return <span key={wordIndex}>&nbsp;</span>;
+            
+            const delay = globalWordIndex * wordDelay;
+            globalWordIndex++;
+            
             return (
               <span
-                key={charIndex}
-                className="inline-block transition-all duration-500 ease-out"
+                key={wordIndex}
+                className="inline-block transition-all duration-700 ease-out mr-[0.25em] whitespace-nowrap"
                 style={{
                   opacity: isAnimating ? 1 : 0,
-                  transform: isAnimating ? "translateX(0)" : "translateX(-18px)",
+                  transform: isAnimating ? "translateY(0)" : "translateY(15px)",
                   transitionDelay: `${delay}ms`,
                 }}
               >
-                {char === " " ? "\u00A0" : char}
+                {word}
               </span>
             );
           })}
