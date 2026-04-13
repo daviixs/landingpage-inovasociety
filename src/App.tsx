@@ -66,9 +66,8 @@ const FadeIn: React.FC<{
 
   return (
     <div
-      className={`transition-opacity ease-out ${className} ${
-        isVisible ? "opacity-100" : "opacity-0"
-      }`}
+      className={`transition-opacity ease-out ${className} ${isVisible ? "opacity-100" : "opacity-0"
+        }`}
       style={{ transitionDuration: `${duration}ms` }}
     >
       {children}
@@ -240,7 +239,7 @@ export default function App() {
 
       {/* Global Reach (Final Section) */}
       <GlobalReach />
-      
+
       {/* Platform Level Footer */}
       <Footer />
     </div>
