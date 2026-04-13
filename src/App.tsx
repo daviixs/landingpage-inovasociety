@@ -7,6 +7,7 @@ import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { LogoCloud } from "@/components/ui/logo-cloud-4";
 import { WorkflowBuilder } from "@/components/WorkflowBuilder";
+import { ClientGrowth } from "@/components/ClientGrowth";
 
 const logos = [
   {
@@ -215,6 +216,9 @@ export default function App() {
 
       {/* Workflow Builder Section */}
       <WorkflowBuilder />
+
+      {/* Client Exponential Growth Section */}
+      <ClientGrowth />
     </div>
   );
 }
