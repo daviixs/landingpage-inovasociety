@@ -2,14 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const mapPins = [
-  { name: 'Canada', flag: '🇨🇦', top: '15%', left: '20%' },
-  { name: 'United States', flag: '🇺🇸', top: '25%', left: '15%' },
-  { name: 'Brazil', flag: '🇧🇷', top: '58%', left: '30%' },
-  { name: 'France', flag: '🇫🇷', top: '-5%', left: '49%' },
-  { name: 'Ivory Coast', flag: '🇨🇮', top: '75%', left: '44%' },
-  { name: 'Italy', flag: '🇮🇹', top: '22%', left: '52%' },
-  { name: 'India', flag: '🇮🇳', top: '40%', left: '72%' },
-  { name: 'Australia', flag: '🇦🇺', top: '70%', left: '86%' },
+  { name: 'Canadá', flag: '🇨🇦', top: '15%', left: '20%' },
+  { name: 'Estados Unidos', flag: '🇺🇸', top: '25%', left: '15%' },
+  { name: 'Brasil', flag: '🇧🇷', top: '58%', left: '30%' },
+  { name: 'França', flag: '🇫🇷', top: '-5%', left: '49%' },
+  { name: 'Costa do Marfim', flag: '🇨🇮', top: '75%', left: '44%' },
+  { name: 'Itália', flag: '🇮🇹', top: '22%', left: '52%' },
+  { name: 'Índia', flag: '🇮🇳', top: '40%', left: '72%' },
+  { name: 'Austrália', flag: '🇦🇺', top: '70%', left: '86%' },
 ];
 
 export function GlobalReach() {
@@ -24,7 +24,7 @@ export function GlobalReach() {
           viewport={{ once: true }}
           className="text-[11px] font-bold tracking-[0.2em] text-[#9F8FEF] uppercase mb-4"
         >
-          GLOBAL
+          PROVA SOCIAL
         </motion.p>
         <motion.h2 
           initial={{ opacity: 0, y: 10 }}
@@ -33,7 +33,8 @@ export function GlobalReach() {
           transition={{ delay: 0.1 }}
           className="text-4xl md:text-5xl font-medium text-gray-900 tracking-tight mb-6"
         >
-          Aja globalmente com a VEX
+          +127 projetos entregues<br />
+          em 16 segmentos diferentes
         </motion.h2>
         <motion.p 
           initial={{ opacity: 0, y: 10 }}
@@ -42,7 +43,7 @@ export function GlobalReach() {
           transition={{ delay: 0.2 }}
           className="text-[15px] text-gray-500 leading-relaxed max-w-2xl mx-auto mb-8"
         >
-          Nossa força: coletar dados do mundo inteiro, combiná-los a análises avançadas em tempo real e transformá-los em puro conhecimento aplicado para a sua empresa.
+          Hoje, 94% dos clientes seguem com a Inova Society depois do teste. "Foi a primeira vez que tivemos uma solução realmente feita para a nossa rotina."
         </motion.p>
         <motion.button 
           initial={{ opacity: 0, y: 10 }}
@@ -51,7 +52,7 @@ export function GlobalReach() {
           transition={{ delay: 0.3 }}
           className="bg-[#121B27] text-white px-6 py-3 rounded-full text-[14px] font-medium hover:bg-black transition-colors"
         >
-          Agendar Demonstração
+          Quero testar grátis por 14 dias →
         </motion.button>
       </div>
 

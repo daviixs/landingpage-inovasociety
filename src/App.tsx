@@ -141,11 +141,11 @@ export default function App() {
           <nav className="pt-6">
             <div className="liquid-glass rounded-xl px-4 py-2 flex items-center justify-between">
               {/* Left: Logo */}
-              <div className="text-2xl font-semibold tracking-tight">VEX</div>
+              <div className="text-2xl font-semibold tracking-tight">Inova Society</div>
 
               {/* Center: Links */}
               <div className="hidden md:flex items-center gap-8 text-sm">
-                {["Story", "Investing", "Building", "Advisory"].map((link) => (
+                {["Automações", "Apps", "Sistemas", "Suporte"].map((link) => (
                   <a
                     key={link}
                     href="#"
@@ -158,7 +158,7 @@ export default function App() {
 
               {/* Right: Button */}
               <button className="bg-white text-black px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors">
-                Start a Chat
+                Quero testar grátis
               </button>
             </div>
           </nav>
@@ -168,21 +168,18 @@ export default function App() {
             <div className="lg:grid lg:grid-cols-2 lg:items-end">
               {/* Left Column */}
               <div>
-                <AnimatedHeading text={"Shaping tomorrow\nwith vision and action."} />
+                <AnimatedHeading text={"Chega de pagar caro\npor tecnologia que  não foi feita pra você."} />
 
                 <FadeIn delay={800}>
                   <p className="text-base md:text-lg text-gray-300 mb-5 max-w-lg">
-                    We back visionaries and craft ventures that define what comes next.
+                    Temos o que o seu negocio precisa.
                   </p>
                 </FadeIn>
 
                 <FadeIn delay={1200}>
                   <div className="flex flex-wrap gap-4">
-                    <button className="bg-white text-black px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
-                      Start a Chat
-                    </button>
                     <button className="liquid-glass border border-white/20 text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-black transition-all duration-300">
-                      Explore Now
+                      Testar sem compromisso
                     </button>
                   </div>
                 </FadeIn>
@@ -193,7 +190,7 @@ export default function App() {
                 <FadeIn delay={1400}>
                   <div className="liquid-glass border border-white/20 px-6 py-3 rounded-xl">
                     <span className="text-lg md:text-xl lg:text-2xl font-light">
-                      Investing. Building. Advisory.
+                      14 dias grátis. Sem cartão. Sem compromisso.
                     </span>
                   </div>
                 </FadeIn>
@@ -204,27 +201,27 @@ export default function App() {
       </div>
 
       {/* Logo Cloud Section */}
-      <div className="min-h-[60vh] w-full flex flex-col items-center justify-center relative bg-black border-b border-white/5 overflow-hidden">
+      <div className="min-h-[50vh] xl:min-h-[60vh] w-full flex flex-col items-center justify-center relative bg-white border-b border-gray-100 overflow-hidden pt-12 pb-16">
         <div
           aria-hidden="true"
           className={cn(
             "-z-0 -top-1/2 -translate-x-1/2 pointer-events-none absolute left-1/2 h-[120vmin] w-[120vmin] rounded-b-full",
-            "bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.08),transparent_50%)]",
+            "bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.03),transparent_50%)]",
             "blur-[30px]"
           )}
         />
 
         <section className="relative z-10 mx-auto w-full max-w-4xl px-4 py-8">
-          <h2 className="mb-8 text-center font-medium text-white text-xl tracking-tight md:text-3xl lg:text-4xl">
-            <span className="text-gray-400">Trusted by experts.</span>
+          <h2 className="mb-8 text-center font-medium text-gray-900 text-xl tracking-tight md:text-3xl lg:text-4xl">
+            <span className="text-gray-500">Ferramentas sérias por trás.</span>
             <br />
-            <span className="font-semibold">Used by the leaders.</span>
+            <span className="font-semibold">Solução do seu jeito na prática.</span>
           </h2>
-          <div className="mx-auto mb-8 h-px w-full max-w-md bg-white/20 [mask-image:linear-gradient(to_right,transparent,black,transparent)]" />
+          <div className="mx-auto mb-8 h-px w-full max-w-md bg-gray-200 [mask-image:linear-gradient(to_right,transparent,black,transparent)]" />
 
           <LogoCloud logos={logos} />
 
-          <div className="mt-8 mx-auto h-px w-full max-w-4xl bg-white/20 [mask-image:linear-gradient(to_right,transparent,black,transparent)]" />
+          <div className="mt-8 mx-auto h-px w-full max-w-4xl bg-gray-200 [mask-image:linear-gradient(to_right,transparent,black,transparent)]" />
         </section>
       </div>
 

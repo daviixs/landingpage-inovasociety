@@ -3,21 +3,21 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { BarChart3, CheckCircle2 } from 'lucide-react';
 
 const dataPointsV1 = [
-  { day: 'Mon', value: 25 },
-  { day: 'Tue', value: 30 },
-  { day: 'Wed', value: 45 },
-  { day: 'Thu', value: 65 },
-  { day: 'Fri', value: 80 },
-  { day: 'Sat', value: 110 },
+  { day: 'Seg', value: 25 },
+  { day: 'Ter', value: 30 },
+  { day: 'Qua', value: 45 },
+  { day: 'Qui', value: 65 },
+  { day: 'Sex', value: 80 },
+  { day: 'Sáb', value: 110 },
 ];
 
 const dataPointsV2 = [
-  { day: 'Mon', value: 35 },
-  { day: 'Tue', value: 40 },
-  { day: 'Wed', value: 70, tooltip: true },
-  { day: 'Thu', value: 95 },
-  { day: 'Fri', value: 130 },
-  { day: 'Sat', value: 180 },
+  { day: 'Seg', value: 35 },
+  { day: 'Ter', value: 40 },
+  { day: 'Qua', value: 70, tooltip: true },
+  { day: 'Qui', value: 95 },
+  { day: 'Sex', value: 130 },
+  { day: 'Sáb', value: 180 },
 ];
 
 export function ClientGrowth() {
@@ -43,20 +43,20 @@ export function ClientGrowth() {
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-start justify-between mb-12 gap-6 relative z-10">
         <div>
           <h2 className="text-xs tracking-widest text-gray-500 font-semibold uppercase mb-4">
-            GOVERNANCE & EVALUATIONS
+            DIFERENCIAL INOVA
           </h2>
           <h3 className="text-3xl md:text-5xl lg:text-[54px] font-medium tracking-tight leading-tight mb-4 text-gray-900">
-            Continuously test and<br />
-            <span className="text-gray-400">improve performance</span>
+            O mercado vende pacote pronto.<br />
+            <span className="text-gray-400">Você recebe algo feito para a sua operação.</span>
           </h3>
         </div>
         
         <div className="flex flex-col items-start lg:items-end w-full lg:w-1/3">
           <p className="text-sm md:text-base text-gray-500 lg:text-right mb-6">
-            With full visibility across your digital team, we audit technical and behavioral performance and proactively improve operating procedures over time.
+            Enquanto muita empresa cobra caro por tecnologia genérica e suporte distante, a Inova Society cria a solução do seu jeito, acompanha de perto e só faz sentido se funcionar para o seu negócio.
           </p>
           <button className="bg-black text-white px-5 py-2.5 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors">
-            Learn more about governance and evaluations
+            Quero testar grátis por 14 dias
           </button>
         </div>
       </div>
@@ -80,24 +80,24 @@ export function ClientGrowth() {
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-gray-100 pb-4 mb-6">
             <div className="flex items-center text-sm text-gray-500 font-medium">
               <BarChart3 className="w-4 h-4 mr-2 text-gray-400" />
-              <span>EW Workspace</span>
+              <span>Inova Society</span>
               <span className="mx-2">&gt;</span>
-              <span className="text-gray-400">Analytics</span>
+              <span className="text-gray-400">Comparativo</span>
             </div>
           </div>
 
           {/* Chart Headers */}
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-8 border-b border-gray-100 relative">
             <div className="mb-4 sm:mb-0">
-               <h4 className="text-[22px] font-semibold tracking-tight text-gray-900 mb-1">Key Performance Indicators</h4>
-               <p className="text-[15px] text-gray-500">January - June 2024</p>
+               <h4 className="text-[22px] font-semibold tracking-tight text-gray-900 mb-1">Genérico vs. sob medida</h4>
+               <p className="text-[15px] text-gray-500">A diferença aparece no dia a dia da operação</p>
             </div>
             <div className="flex flex-col gap-2 text-[13px] font-medium text-gray-500">
                <div className="flex items-center">
-                 <div className="w-2.5 h-2.5 rounded-full bg-[#3B82F6] mr-2" /> Version 1
+                 <div className="w-2.5 h-2.5 rounded-full bg-[#3B82F6] mr-2" /> Solução genérica
                </div>
                <div className="flex items-center">
-                 <div className="w-2.5 h-2.5 rounded-full bg-[#F59E0B] mr-2" /> Version 2
+                 <div className="w-2.5 h-2.5 rounded-full bg-[#F59E0B] mr-2" /> Solução sob medida
                </div>
             </div>
             
@@ -213,10 +213,10 @@ export function ClientGrowth() {
                   transform: 'translate(-50%, -120%)'
                 }}
               >
-                <div className="font-semibold text-gray-900 border-b border-gray-100 pb-1 mb-1 text-[13px]">Wed</div>
+                <div className="font-semibold text-gray-900 border-b border-gray-100 pb-1 mb-1 text-[13px]">Qua</div>
                 <div className="text-[12px] text-gray-500 leading-tight">
-                  Successful bookings: 62%<br />
-                  Margin: 12.5%
+                  Tempo poupado: 62%<br />
+                  Retrabalho: -12,5%
                 </div>
                 {/* Arrow */}
                 <div className="absolute left-1/2 -bottom-1.5 -translate-x-1/2 w-3 h-3 bg-white border-b border-r border-gray-200 rotate-45" />
@@ -236,10 +236,10 @@ export function ClientGrowth() {
               >
                 <div className="flex items-center mb-1 text-gray-900 font-semibold text-[13px]">
                   <CheckCircle2 className="w-4 h-4 text-green-500 mr-1.5" />
-                  Tooltip
+                  Suporte humano
                 </div>
                 <div className="text-[11px] text-gray-500 leading-snug">
-                  Version 2's negotiation logic updates show significant improvements to margin.
+                  Com ajustes próximos da sua rotina, a solução evolui melhor e entrega mais resultado.
                 </div>
               </motion.div>
 

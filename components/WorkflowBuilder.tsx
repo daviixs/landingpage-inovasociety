@@ -1,30 +1,31 @@
 import React from 'react';
+import mockupImg from '../apple-iphone-15-black-mockup/WhatsApp Image 2026-04-13 at 16.32.18-left.png';
 
 const cases = [
   {
-    title: "Inbound Sales",
-    description: "From following up with & qualifying leads to running negotiations and autonomously generating revenue over phone and email.",
-    metrics: "70% reduction in cost per lead\n10% margin increase"
+    title: "Automação de atendimento",
+    description: "Organize mensagens, respostas e repasses sem perder tempo nem cliente no caminho.",
+    metrics: "Mais agilidade no atendimento\nMenos gargalo na operação"
   },
   {
-    title: "Customer Service",
-    description: "Over web chat, phone, or other channels, providing 24/7 access to updates and inquiries with ticket creation and follow-up.",
-    metrics: "100% response rate; 0min FRT\n50%+ autonomously handled"
+    title: "App para equipe",
+    description: "Centralize pedidos, tarefas ou checklists em um app feito para a rotina da sua operação.",
+    metrics: "Processo mais claro\nEquipe mais produtiva"
   },
   {
-    title: "Recruiting & Staffing",
-    description: "Handling candidate screening and shift confirmation to ensure proper staffing and accurate resource planning.",
-    metrics: "20% more candidates captured\n60% shift confirmation increase"
+    title: "Sistema personalizado",
+    description: "Conecte vendas, financeiro e operação em um fluxo mais simples e sem retrabalho diário.",
+    metrics: "Tudo no seu fluxo\nMais controle no dia a dia"
   },
   {
-    title: "Appointment scheduling",
-    description: "Via conversation or through booking sites, our AI workers handle scheduling and rescheduling autonomously.",
-    metrics: "1000x faster scheduling\n25% of the cost"
+    title: "Agendamentos",
+    description: "Automatize horários, confirmações e lembretes sem depender de planilhas ou processos manuais.",
+    metrics: "Menos faltas\nAgenda mais organizada"
   },
   {
-    title: "Payment collections",
-    description: "Following up on unpaid invoices with intelligent escalations, phone-tree navigation, and document verification.",
-    metrics: "119x ROI on cash collected vs cost to collect"
+    title: "Cobrança e follow-up",
+    description: "Acompanhe pagamentos, lembretes e retornos sem precisar fazer tudo no manual.",
+    metrics: "Cobrança mais rápida\nMais previsibilidade"
   }
 ];
 
@@ -37,43 +38,38 @@ export function WorkflowBuilder() {
           {/* Left Side */}
           <div>
             <h2 className="text-sm font-medium tracking-widest text-gray-500 uppercase mb-8">
-              Workflow Builder
+              O QUE A INOVA FAZ
             </h2>
             <h3 className="text-4xl md:text-5xl lg:text-6xl text-gray-900 tracking-tight leading-tight mb-6">
-              Build AI workers for<br />
-              <span className="text-gray-400">complexity and scale</span>
+              Automações, apps e sistemas<br />
+              <span className="text-gray-400">feitos para o seu negócio</span>
             </h3>
             <p className="text-gray-600 text-lg mb-8 max-w-md">
-              AI workers are autonomous agents built to your unique ways of working — handling conversation, reasoning, and execution across systems.
+              Automatizamos processos, criamos apps sob medida, desenvolvemos sistemas personalizados e entregamos qualquer solução que envolva tecnologia sem complicar sua rotina.
             </p>
             <button className="bg-black text-white px-6 py-3 rounded-md font-medium hover:bg-gray-800 transition-colors">
-              Learn more about what AI workers can do
+              Quero testar grátis por 14 dias
             </button>
           </div>
 
           {/* Right Side */}
-          <div className="flex flex-col justify-center">
-            <ul className="space-y-6">
-              {[
-                "Agentic reasoning for dynamic decisions and conversations",
-                "Deterministic logic for precise execution that follows business rules",
-                "Native tool use to take action across any system, channel, or API"
-              ].map((text, i) => (
-                <li key={i} className="flex justify-between items-center border-b border-gray-200 pb-4">
-                  <span className="text-gray-900 font-medium">{text}</span>
-                  <span className="text-sm font-semibold text-gray-400">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                </li>
-              ))}
-            </ul>
+          <div className="flex flex-col justify-center items-center lg:items-end">
+             <div className="relative group">
+                {/* Decorative background blur for the phone mockup */}
+                <div className="absolute inset-0 bg-black/5 rounded-[3rem] blur-2xl transform group-hover:scale-105 transition-transform duration-500"></div>
+                <img 
+                  src={mockupImg} 
+                  alt="App interface mockup" 
+                  className="relative w-full max-w-xs md:max-w-sm rounded-[3rem] shadow-2xl z-10 transition-transform duration-500 hover:-translate-y-2"
+                />
+             </div>
           </div>
         </div>
 
         {/* Use Cases Grid */}
         <div>
           <h4 className="text-xs font-semibold tracking-widest text-gray-400 uppercase mb-8">
-            Common Use Cases Our Customers Deploy
+            EXEMPLOS DO QUE PODEMOS CRIAR
           </h4>
           
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">

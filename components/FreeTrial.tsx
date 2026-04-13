@@ -15,8 +15,8 @@ export function FreeTrial() {
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-5xl lg:text-[64px] font-medium tracking-tight leading-[1.1] text-gray-900"
         >
-          Experimente a Diferença na<br />
-          Prática. Sem compromisso.
+          Teste 14 dias grátis na<br />
+          prática. Sem compromisso.
         </motion.h2>
       </div>
 
@@ -34,7 +34,7 @@ export function FreeTrial() {
             className="flex items-center gap-2 mb-6"
           >
             <div className="bg-[#EAECE9] text-[#2F3A30] text-sm font-semibold px-3 py-1 rounded-md">
-              VEX Plataforma
+              Inova Society
             </div>
           </motion.div>
 
@@ -45,8 +45,8 @@ export function FreeTrial() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-3xl md:text-4xl lg:text-[42px] font-medium tracking-tight leading-[1.1] mb-6"
           >
-            Teste sem<br />
-            compromisso
+            Você testa antes<br />
+            de pagar
           </motion.h3>
 
           <motion.p 
@@ -56,7 +56,7 @@ export function FreeTrial() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-gray-600 font-medium text-[17px] leading-relaxed mb-8 max-w-lg"
           >
-            Oferecemos 14 dias de testes gratuitos para qualquer aplicação construída por nós. A equipe constrói cada parte focando em design lógico para entregar a melhor experiência VEX em escala para seus clientes.
+            Você testa uma solução feita para o seu negócio e só paga se gostar. ✔ 14 dias grátis • ✔ Sem fidelidade • ✔ Sem multa • ✔ Suporte humano • ✔ Solução personalizada
           </motion.p>
 
           <motion.a 
@@ -67,7 +67,7 @@ export function FreeTrial() {
             href="#" 
             className="group flex items-center text-[15px] font-semibold text-gray-900 hover:text-gray-600 transition-colors"
           >
-            Começar teste 
+            Quero testar grátis por 14 dias
             <ArrowRight className="ml-1 w-4 h-4 transition-transform group-hover:translate-x-1" />
           </motion.a>
         </div>
@@ -85,7 +85,7 @@ export function FreeTrial() {
           >
             <img 
               src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" 
-              alt="Data Dashboard UI" 
+              alt="Painel de dados" 
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             {/* Subtle overlay gradient like original has */}
@@ -102,7 +102,7 @@ export function FreeTrial() {
           >
               <img 
                 src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop" 
-                alt="App interface" 
+                alt="Interface de aplicativo" 
                 className="w-full h-full object-cover rounded-xl"
               />
           </motion.div>
@@ -117,7 +117,7 @@ export function FreeTrial() {
           >
              <img 
                 src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=2070&auto=format&fit=crop" 
-                alt="Crypto abstract" 
+                alt="Visual abstrato de tecnologia" 
                 className="w-full h-full object-cover mix-blend-overlay opacity-50"
               />
           </motion.div>
