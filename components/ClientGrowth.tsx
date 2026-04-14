@@ -30,9 +30,15 @@ export function ClientGrowth() {
   const inovaPath = dataPoints
     .map((d, i) => `${i === 0 ? 'M' : 'L'} ${getX(i)} ${getY(d.value)}`)
     .join(' ');
+  const flatInovaPath = dataPoints
+    .map((d, i) => `${i === 0 ? 'M' : 'L'} ${getX(i)} ${getY(0)}`)
+    .join(' ');
 
   const genericPath = genericPoints
     .map((v, i) => `${i === 0 ? 'M' : 'L'} ${getX(i)} ${getY(v)}`)
+    .join(' ');
+  const flatGenericPath = genericPoints
+    .map((v, i) => `${i === 0 ? 'M' : 'L'} ${getX(i)} ${getY(0)}`)
     .join(' ');
 
   const active = activeIndex !== null ? dataPoints[activeIndex] : null;
@@ -66,7 +72,16 @@ export function ClientGrowth() {
         <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[70%] bg-[#FDF0A8]/80 rounded-full blur-[100px] pointer-events-none" />
         <div className="absolute top-[20%] right-[10%] w-[40%] h-[50%] bg-[#478EA2]/60 rounded-full blur-[120px] pointer-events-none" />
 
-        <div className="relative w-full max-w-[850px] bg-white rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] p-6 md:p-8 z-20">
+        <motion.div 
+          className="relative w-full max-w-[850px] bg-white rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] p-6 md:p-8 z-20"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={{
+            hidden: { opacity: 0, y: 60 },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+          }}
+        >
 
           {/* Breadcrumb */}
           <div className="flex items-center text-sm text-gray-500 font-medium border-b border-gray-100 pb-4 mb-6">
@@ -124,15 +139,14 @@ export function ClientGrowth() {
 
                 {/* Linha genérica — cinza tracejada, fina, discreta */}
                 <motion.path
-                  d={genericPath}
                   fill="none"
                   stroke="#D1D5DB"
                   strokeWidth="2"
                   strokeDasharray="6 4"
-                  initial={{ pathLength: 0 }}
-                  whileInView={{ pathLength: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1.2, ease: 'easeInOut' }}
+                  variants={{
+                    hidden: { d: flatGenericPath, opacity: 0 },
+                    visible: { d: genericPath, opacity: 1, transition: { duration: 1.2, ease: 'easeOut' } }
+                  }}
                 />
 
                 {/* Label "Mercado genérico" ao lado da linha */}
@@ -148,14 +162,13 @@ export function ClientGrowth() {
 
                 {/* Linha Inova — laranja, principal */}
                 <motion.path
-                  d={inovaPath}
                   fill="none"
                   stroke="#F59E0B"
                   strokeWidth="3"
-                  initial={{ pathLength: 0 }}
-                  whileInView={{ pathLength: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1.6, ease: 'easeInOut' }}
+                  variants={{
+                    hidden: { d: flatInovaPath, opacity: 0 },
+                    visible: { d: inovaPath, opacity: 1, transition: { duration: 1.6, ease: 'easeOut', delay: 0.2 } }
+                  }}
                 />
 
                 {/* Label "Inova Society" ao lado da linha */}
@@ -183,15 +196,18 @@ export function ClientGrowth() {
                     {/* Nó Inova */}
                     <motion.circle
                       cx={getX(i)}
-                      cy={getY(d.value)}
                       r={activeIndex === i ? 9 : 6}
                       fill={activeIndex === i ? '#F59E0B' : '#FCD34D'}
                       stroke="#F59E0B"
                       strokeWidth="2"
-                      initial={{ scale: 0 }}
-                      whileInView={{ scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 1.4 + i * 0.08 }}
+                      variants={{
+                        hidden: { cy: getY(0), scale: 0 },
+                        visible: { 
+                          cy: getY(d.value), 
+                          scale: 1, 
+                          transition: { delay: 0.4 + i * 0.08, duration: 0.8, type: "spring", bounce: 0.4 } 
+                        }
+                      }}
                       style={{ cursor: 'pointer' }}
                     />
 
@@ -246,7 +262,7 @@ export function ClientGrowth() {
               A solução evolui junto com o seu negócio — sem custo extra, sem fila de atendimento.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* CTA pós-gráfico */}
