@@ -3,17 +3,12 @@ import mockupImg from '../apple-iphone-15-black-mockup/WhatsApp Image 2026-04-13
 
 const cases = [
   {
-    title: "Automação de atendimento",
+    title: "Automação de Atendimento",
     description: "Organize mensagens, respostas e repasses sem perder tempo nem cliente no caminho.",
     metrics: "Mais agilidade no atendimento\nMenos gargalo na operação"
   },
   {
-    title: "App para equipe",
-    description: "Centralize pedidos, tarefas ou checklists em um app feito para a rotina da sua operação.",
-    metrics: "Processo mais claro\nEquipe mais produtiva"
-  },
-  {
-    title: "Sistema personalizado",
+    title: "Sistema Personalizado",
     description: "Conecte vendas, financeiro e operação em um fluxo mais simples e sem retrabalho diário.",
     metrics: "Tudo no seu fluxo\nMais controle no dia a dia"
   },
@@ -21,11 +16,6 @@ const cases = [
     title: "Agendamentos",
     description: "Automatize horários, confirmações e lembretes sem depender de planilhas ou processos manuais.",
     metrics: "Menos faltas\nAgenda mais organizada"
-  },
-  {
-    title: "Cobrança e follow-up",
-    description: "Acompanhe pagamentos, lembretes e retornos sem precisar fazer tudo no manual.",
-    metrics: "Cobrança mais rápida\nMais previsibilidade"
   }
 ];
 
@@ -67,12 +57,12 @@ export function WorkflowBuilder() {
         </div>
 
         {/* Use Cases Grid */}
-        <div>
-          <h4 className="text-xs font-semibold tracking-widest text-gray-400 uppercase mb-8">
+        <div className="w-full flex flex-col items-center mt-12 lg:mt-0">
+          <h4 className="text-xs font-semibold tracking-widest text-gray-400 uppercase mb-8 text-center w-full">
             EXEMPLOS DO QUE PODEMOS CRIAR
           </h4>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mx-auto">
             {cases.map((useCase, index) => (
               <div key={index} className="bg-[#F3EFE9] rounded-sm p-6 flex flex-col justify-between min-h-[320px]">
                 <div>
