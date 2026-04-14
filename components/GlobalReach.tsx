@@ -100,8 +100,8 @@ export function GlobalReach() {
             ))}
           </div>
           
-          {/* Fade out bottom to blend with white background naturally */}
-          <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent pointer-events-none z-20" />
+          
+
         </div>
       </div>
       
