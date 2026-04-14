@@ -67,7 +67,7 @@ export function FreeTrial() {
             href="#"
             className="group flex items-center text-[15px] font-semibold text-gray-900 hover:text-gray-600 transition-colors"
           >
-            Quero testar grátis por 14 dias
+            Montar minha solução agora
             <ArrowRight className="ml-1 w-4 h-4 transition-transform group-hover:translate-x-1" />
           </motion.a>
         </div>
