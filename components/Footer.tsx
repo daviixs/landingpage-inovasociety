@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, ShieldCheck, CheckCircle } from 'lucide-react';
+import { MdPhoneAndroid } from 'react-icons/md';
 
 export function Footer() {
   return (
@@ -49,7 +50,10 @@ export function Footer() {
           
           {/* Logo & Certifications Area */}
           <div className="col-span-1 lg:col-span-4 flex flex-col items-start">
-             <div className="text-2xl font-semibold tracking-tight mb-8">Inova Society</div>
+             <div className="flex items-center gap-2 text-2xl font-semibold tracking-tight mb-8">
+               Inova Society
+               <MdPhoneAndroid />
+             </div>
              
              <div className="flex items-center gap-6 mt-2">
                 <div className="flex items-center gap-3">
