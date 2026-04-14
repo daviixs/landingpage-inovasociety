@@ -3,6 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import panelMockup from '../apple-iphone13mini-starlight-mockup/image.png';
 import phoneMockup from '../apple-iphone13mini-starlight-mockup/WhatsApp Image 2026-04-14 at 10.46.26-portrait.png';
+import mockTwo from '../apple-iphone13mini-starlight-mockup/mock2.png';
 
 export function FreeTrial() {
   return (
@@ -98,12 +99,12 @@ export function FreeTrial() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="rounded-2xl overflow-hidden bg-[#F0F2ED] aspect-square shadow-sm flex items-center justify-center p-4"
+            className="rounded-2xl overflow-hidden bg-gray-50 aspect-auto shadow-sm flex items-center justify-center p-4 min-h-[250px] group"
           >
             <img
-              src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop"
+              src={mockTwo}
               alt="Interface de aplicativo"
-              className="w-full h-full object-cover rounded-xl"
+              className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
             />
           </motion.div>
 
