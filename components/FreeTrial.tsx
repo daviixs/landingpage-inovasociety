@@ -1,6 +1,8 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import panelMockup from '../apple-iphone13mini-starlight-mockup/image.png';
+import phoneMockup from '../apple-iphone13mini-starlight-mockup/WhatsApp Image 2026-04-14 at 10.46.26-portrait.png';
 
 export function FreeTrial() {
   return (
@@ -81,15 +83,13 @@ export function FreeTrial() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="col-span-2 rounded-2xl md:rounded-3xl overflow-hidden bg-gray-100 aspect-[16/9] shadow-sm relative group"
+            className="col-span-2 rounded-2xl md:rounded-3xl overflow-hidden bg-gray-50 shadow-sm relative group flex items-center justify-center p-4 md:p-8 min-h-[200px] sm:min-h-[300px]"
           >
             <img
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+              src={panelMockup}
               alt="Painel de dados"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              className="w-full h-full max-h-[400px] object-contain transition-transform duration-700 group-hover:scale-105"
             />
-            {/* Subtle overlay gradient like original has */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
           </motion.div>
 
           {/* Bottom Left Image */}
@@ -113,12 +113,12 @@ export function FreeTrial() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="rounded-2xl overflow-hidden bg-[#0A41E1] aspect-square shadow-sm flex items-center justify-center"
+            className="rounded-2xl overflow-hidden bg-gray-100 aspect-square shadow-sm flex items-center justify-center p-4"
           >
             <img
-              src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=2070&auto=format&fit=crop"
-              alt="Visual abstrato de tecnologia"
-              className="w-full h-full object-cover mix-blend-overlay opacity-50"
+              src={phoneMockup}
+              alt="Visual do App no Celular"
+              className="w-full h-full object-contain"
             />
           </motion.div>
 
