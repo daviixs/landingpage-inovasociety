@@ -17,10 +17,10 @@ export function ClientGrowth() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const width = 800;
-  const height = 320;
-  const paddingX = 50;
-  const paddingY = 40;
-  const maxVal = 200;
+  const height = 340;
+  const paddingX = 40;
+  const paddingY = 20;
+  const maxVal = 190;
 
   const getX = (i: number) =>
     paddingX + (i * ((width - paddingX * 2) / (dataPoints.length - 1)));
@@ -114,9 +114,9 @@ export function ClientGrowth() {
           </div>
 
           {/* SVG Chart */}
-          <div className="relative w-full overflow-x-auto pb-2">
-            <div className="min-w-[600px] relative">
-              <svg viewBox={`0 0 ${width} ${height}`} className="w-full overflow-visible">
+          <div className="relative w-full pb-2">
+            <div className="w-full relative">
+              <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-auto overflow-visible">
 
                 {/* Grid lines */}
                 {[1, 2, 3, 4].map((n) => (
@@ -231,24 +231,30 @@ export function ClientGrowth() {
                   initial={{ opacity: 0, y: 6 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.15 }}
-                  className="absolute pointer-events-none bg-white border border-amber-100 rounded-lg shadow-lg p-3 w-[210px] z-30"
+                  className="absolute pointer-events-none bg-white border border-amber-100 rounded-lg shadow-lg p-3 w-[200px] md:w-[220px] z-30"
                   style={{
                     left: `${(getX(activeIndex) / width) * 100}%`,
                     top: `${(getY(active.value) / height) * 100}%`,
-                    transform: 'translate(-50%, -120%)',
+                    transform: `translate(-${(getX(activeIndex) / width) * 100}%, -120%)`,
                   }}
                 >
-                  <p className="text-[12px] font-semibold text-gray-900 border-b border-gray-100 pb-1.5 mb-2">
+                  <p className="text-[11px] md:text-[12px] font-semibold text-gray-900 border-b border-gray-100 pb-1.5 mb-2 leading-tight">
                     {active.day} — {active.tooltip.titulo}
                   </p>
-                  <div className="flex flex-col gap-1.5 text-[11px] text-gray-500">
+                  <div className="flex flex-col gap-1.5 text-[10px] md:text-[11px] text-gray-500">
                     <span>⏱ {active.tooltip.economia}</span>
                     <span>💰 Custo reduzido: <strong className="text-green-600">{active.tooltip.custo}</strong></span>
-                    <span className="text-[10px] text-amber-500 font-medium pt-1">
+                    <span className="text-[9px] md:text-[10px] text-amber-500 font-medium pt-1 leading-tight">
                       vs. sistema genérico que não acompanha seu crescimento
                     </span>
                   </div>
-                  <div className="absolute left-1/2 -bottom-1.5 -translate-x-1/2 w-3 h-3 bg-white border-b border-r border-amber-100 rotate-45" />
+                  <div 
+                    className="absolute -bottom-1.5 w-3 h-3 bg-white border-b border-r border-amber-100" 
+                    style={{
+                      left: `${(getX(activeIndex) / width) * 100}%`,
+                      transform: 'translateX(-50%) rotate(45deg)'
+                    }}
+                  />
                 </motion.div>
               )}
             </div>
